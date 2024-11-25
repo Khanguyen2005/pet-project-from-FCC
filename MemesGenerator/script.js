@@ -1,7 +1,18 @@
 const canvas = document.getElementById("memeCanvas");
 const ctx = canvas.getContext("2d");
 const imageInput = document.getElementById("imageInput");
+const fileNameDisplay = document.getElementById("file-name");
 let uploadedImage = null;
+
+// Update file name on file input change
+imageInput.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    fileNameDisplay.textContent = file.name;
+  } else {
+    fileNameDisplay.textContent = "Chưa chọn tệp";
+  }
+});
 
 // Load the image onto the canvas
 imageInput.addEventListener("change", (event) => {

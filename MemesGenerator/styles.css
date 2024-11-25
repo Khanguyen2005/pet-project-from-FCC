@@ -1,3 +1,4 @@
+/* General body styling */
 body {
   display: flex;
   flex-direction: column;
@@ -7,11 +8,13 @@ body {
   color: white;
 }
 
+/* Canvas styling */
 canvas {
   border: 2px solid #333;
   margin-top: 10px;
 }
 
+/* Controls styling */
 .controls {
   margin-top: 10px;
 }
@@ -21,6 +24,36 @@ canvas {
   margin: 5px;
 }
 
+/* File upload container */
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+}
+
+/* Displaying file name */
+#file-name {
+  font-size: 14px;
+  color: white;
+}
+
+/* Generate button styling */
 #generate {
   background-color: green;
   color: white;
@@ -31,6 +64,7 @@ canvas {
   cursor: pointer;
 }
 
+/* Download button styling */
 #download {
   background-color: blue;
   color: white;

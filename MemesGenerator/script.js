@@ -44,7 +44,7 @@ function drawImage() {
 
     // Set text styles
     ctx.font = "30px Impact";
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "red";
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
     ctx.textAlign = "center";

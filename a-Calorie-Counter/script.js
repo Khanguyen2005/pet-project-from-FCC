@@ -15,4 +15,12 @@ function cleanInputString(str) {
 
 function isInvalidInput(str) {
   const regex = /\d+e\d+/i; //i flag, i là viết tắt của insensitive
+  return str.match(regex);
+}
+
+function addEntry() {
+  const targetInputContainer = document.querySelector(
+    `#${entryDropdown.value} .input-container`
+  );
+  const entryNumber = targetInputContainer.querySelectorAll();
 }

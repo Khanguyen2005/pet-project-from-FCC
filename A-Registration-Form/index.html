@@ -10,13 +10,31 @@
         <p>Please fill out this form with the required information</p>
         <form action="https://register-demo.freecodecamp.org" method="post">
             <fieldset>
-                <label for="first-name">Enter Your First Name: <input id="first-name" type="text" /></label>
-                <label for="last-name">Enter Your Last Name: <input id="last-name" type="text" /></label>
-                <label for="email">Enter Your Email: <input id="email" type="email" /></label>
-                <label for="new-password">Create a New Password: <input id="new-password" type="password" /></label>
+                <label for="first-name">Enter Your First Name: <input id="first-name" name="fname" type="text" required/></label>
+                <label for="last-name">Enter Your Last Name: <input id="last-name" name="lname" type="text" required/></label>
+                <label for="email">Enter Your Email: <input id="email" name="email" type="email" required/></label>
+                <label for="new-password">Create a New Password: <input id="new-password" name="pwd" type="password" pattern="[a-z0-5]{8,}" required/></label>
             </fieldset>
-            <fieldset></fieldset>
-            <fieldset></fieldset>
+            <fieldset>
+                <legend>Account type (required)</legend>
+                <label for="personal-account"><input type="radio" id="personal-account" class="inline" name="account-type" checked> Personal</label>
+                <label for="business-account"><input type="radio" id="business-account" class="inline" name="account-type"> Business</label>
+            </fieldset>
+            <fieldset>
+                <label for="profile-picture">Upload a profile picture: <input type="file" id="profile-picture" name="profile-picture"></label>
+                <label for="age">Input your age (years): <input type="number" id="age" name="age" min="13" max="120"></label>
+                <label for="referrer">How did you hear about us?
+                    <select name="referrer" id="referrer">
+                        <option value="">>(select one)</option>
+                        <option value="1">freeCodeCamp News</option>
+                        <option value="2">freeCodeCamp YouTube Channel</option>
+                        <option value="3">freeCodeCamp Forum</option>
+                        <option value="4">Other</option>
+                    </select>
+                </label>
+                <label for="bio">Provide a bio:<textarea name="bio" id="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea></label>
+            </fieldset>
+            <label for="terms-and-conditions"><input type="checkbox" id="terms-and-conditions" class="inline" name="terms-and-conditions" required>I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
             <input type="submit" value="Submit">
         </form>
     </body>
